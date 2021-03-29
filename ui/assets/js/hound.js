@@ -296,7 +296,7 @@ var Model = {
   },
 
   UrlToRepo: function(repo, path, line, rev) {
-    return UrlToRepo(this.repos[repo], path, line, rev);
+    return UrlToRepo(this.repos[repo], repo, path, line, rev);
   }
 
 };

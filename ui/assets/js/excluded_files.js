@@ -2,6 +2,7 @@ import {UrlToRepo} from './common';
 
 var ExcludedRow = React.createClass({
   render: function() {
+    //FIXME: where to get the name of the repo?
     var url = UrlToRepo(this.props.repo, this.props.file.Filename, this.props.rev);
     return (
       <tr>

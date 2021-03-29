@@ -5,7 +5,7 @@ export function ExpandVars(template, values) {
     return template;
 };
 
-export function UrlToRepo(repo, path, line, rev) {
+export function UrlToRepo(repo, name, path, line, rev) {
     var url = repo.url.replace(/\.git$/, ''),
         pattern = repo['url-pattern'],
         filename = path.substring(path.lastIndexOf('/') + 1),
@@ -34,6 +34,7 @@ export function UrlToRepo(repo, path, line, rev) {
     // I'm sure there is a nicer React/jsx way to do this:
     return ExpandVars(pattern['base-url'], {
         url : url,
+        name : name,
         path: path,
         rev: rev,
         anchor: anchor
